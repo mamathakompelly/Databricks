@@ -9,31 +9,31 @@ on:
       RESOURCE_GROUP:
         description: 'Resource Group Name'
         required: true
-        default: 'AH-Azure-Testing'
+        default: 'Databricks-MyProject'
 
       # The Azure region to which to deploy your resources
       LOCATION:
         description: 'Azure Region'
         required: true
-        default: 'East US'
+        default: 'EastUS2'
 
       # This is the name of your Azure Databricks resource
       WORKSPACE_NAME:
         description: 'Databricks workspace name'
         required: true
-        default: 'Databricks_ws'
+        default: 'Databricks-MyProject'
 
       # This is a KeyVault for holding the Service Principal to make Databricks API calls and to hold Databricks KeyVault backed Secrets
       KEY_VAULT_NAME:
         description: 'KeyVault name'
         required: true
-        default: 'c434b767-d548-440d-a889-ba2e3bbd2095'
+        default: 'KeyVault-MyProject'
 
       # This is a KeyVault for holding the Service Principal to make Databricks API calls and to hold Databricks KeyVault backed Secrets
       SUBSCRIPTION_ID:
         description: 'Azure Subscription Id'
         required: true
-        default: 'fc6cca5e-557a-4d2e-8bbf-12d623351bc7'
+        default: '00000000-0000-0000-0000-000000000000'
 
       # Inialize the system
       # Note: We only want to run the KeyVault ARM template once.  If you keep re-running, then you will OVERWRITE your values
@@ -105,7 +105,7 @@ jobs:
     - name: Login via Az module
       uses: azure/login@v1.1
       with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        creds: ${{ secrets.AZURE}}
         # set this if you will be using PowerShell
         # enable-AzPSSession: true 
 

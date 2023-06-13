@@ -15,7 +15,7 @@ on:
       LOCATION:
         description: 'Azure Region'
         required: true
-        default: 'EastUS2'
+        default: 'East US'
 
       # This is the name of your Azure Databricks resource
       WORKSPACE_NAME:
@@ -27,7 +27,7 @@ on:
       KEY_VAULT_NAME:
         description: 'KeyVault name'
         required: true
-        default: 'MI78Q~GhDfnpiiIMCaIAo1zSEKZR9gJKq6A4Mdda'
+        default: 'c434b767-d548-440d-a889-ba2e3bbd2095'
 
       # This is a KeyVault for holding the Service Principal to make Databricks API calls and to hold Databricks KeyVault backed Secrets
       SUBSCRIPTION_ID:

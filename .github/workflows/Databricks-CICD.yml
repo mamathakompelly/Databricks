@@ -510,3 +510,4 @@ jobs:
         cd "$GITHUB_WORKSPACE/jobs"
         chmod +x $GITHUB_WORKSPACE/deployment-scripts/deploy-jobs.sh
         $GITHUB_WORKSPACE/deployment-scripts/deploy-jobs.sh ${{ steps.databricksSecretAction.outputs.databricks-dev-ops-tenant-id }} ${{ steps.databricksSecretAction.outputs.databricks-dev-ops-client-id }} ${{ steps.databricksSecretAction.outputs.databricks-dev-ops-client-secret }} ${{ steps.databricksSecretAction.outputs.databricks-dev-ops-subscription-id }} ${{ env.resourceGroupName }} ${{ env.databricksWorkspaceName }}
+  #MYCHANGES
